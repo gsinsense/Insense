@@ -1,0 +1,19 @@
+
+server:
+  port: 8383
+  context-path: /private/insense
+
+security:
+  headers:
+    frame: true
+  enable-csrf: true
+  user:
+    name: insense
+    password: insense
+    role: ADMIN
+
+spring:
+  freemarker:
+    cache: true
+    settings:
+      auto_import: /spring.ftl as spring, insense/layout/shell.ftl as page

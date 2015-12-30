@@ -1,0 +1,19 @@
+# mac related
+.DS_Store
+
+# intellij idea related
+.idea/
+**/*.iml
+
+# eclipse related
+.settings
+.project
+
+# gradle related
+out/
+build/
+target/
+.gradle/
+
+# node related
+node_modules/

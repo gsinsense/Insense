@@ -1,0 +1,36 @@
+allprojects{
+
+    group 'com.ensense'
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    project.buildDir = 'target'
+}
+
+subprojects{
+
+    repositories{
+        jcenter()
+    }
+
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+        options.fork = true
+    }
+
+}
+
+project(":$rootProject.name-web"){
+    dependencies{
+        compile project(":$rootProject.name-core")
+        compile project(":$rootProject.name-data")
+        compile project(":$rootProject.name-services")
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
+}
