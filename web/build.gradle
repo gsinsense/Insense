@@ -18,4 +18,8 @@ apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'spring-boot'
 
+eclipse.project{
+    natures "org.springframework.ide.eclipse.core.springnature"
+}
+
 apply from: "$projectDir/dependencies.gradle"

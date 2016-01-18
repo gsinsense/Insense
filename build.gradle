@@ -7,6 +7,10 @@ allprojects{
     apply plugin: 'idea'
 
     project.buildDir = 'target'
+
+    eclipse.project{
+        natures "org.springsource.ide.eclipse.gradle.core.nature"
+    }
 }
 
 subprojects{
