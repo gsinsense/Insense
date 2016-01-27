@@ -1,4 +1,4 @@
-package com.ensense.insense.controller;
+package com.ensense.insense;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
