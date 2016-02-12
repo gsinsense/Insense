@@ -17,3 +17,6 @@ target/
 
 # node related
 node_modules/
+
+# git related
+.git/
